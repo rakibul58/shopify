@@ -19,3 +19,7 @@
     background-color: inherit;
     border: 1px solid wheat;
 }
+
+nav .active{
+    color: #FFDFCA;
+}
