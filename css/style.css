@@ -1,0 +1,21 @@
+.my-nav-link{
+    color: white;
+    text-decoration: none;
+    transition: color 500ms ease-in;
+}
+.my-nav-link:hover{
+    color: #FFDFCA;
+}
+
+.my-btn{
+    background-color: #FF002D;
+    padding: 5px 20px;
+    border: 0px;
+    transition: background 800ms ease-out;
+    /* opacity: 90%; */
+}
+
+.my-btn:hover{
+    background-color: inherit;
+    border: 1px solid wheat;
+}
