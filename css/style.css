@@ -12,7 +12,6 @@
     background-image: linear-gradient(to right top, #ff70f3, #ff4bc1, #ff2a88, #ff274e, #ff4200);
     padding: 5px 20px;
     border: 0px;
-    transition: background-image 600ms ease-out;
     border: 0.2px solid;
     /* opacity: 90%; */
 }
