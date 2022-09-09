@@ -8,16 +8,19 @@
 }
 
 .my-btn{
-    background-color: #FF002D;
+
+    background-image: linear-gradient(to right top, #ff70f3, #ff4bc1, #ff2a88, #ff274e, #ff4200);
     padding: 5px 20px;
     border: 0px;
-    transition: background 800ms ease-out;
+    transition: background-image 600ms ease-out;
+    border: 0.2px solid;
     /* opacity: 90%; */
 }
 
 .my-btn:hover{
-    background-color: inherit;
-    border: 1px solid wheat;
+    background-image: linear-gradient(to left bottom, #ff70f3, #ff4bc1, #ff2a88, #ff274e, #ff4200);
+    /* background-color: inherit; */
+    /* border: 1px solid wheat; */
 }
 
 nav .active{
