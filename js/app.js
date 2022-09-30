@@ -28,7 +28,7 @@ const showProducts = products =>
                     <h5 class="text-warning">${product.price}$<h5>
                     <p id="stars">${stars.innerHTML}</p>
                 </div>
-                <button class="my-btn rounded text-white fw-semibold">Buy</button>
+                <button onclick="addToCart(${product.price} , ${product.id})" class="my-btn rounded text-white fw-semibold">Buy</button>
                 <button class="my-btn rounded text-white fw-semibold">Details</button>
             </div>
         </div>
@@ -63,6 +63,52 @@ const getstars = numOfStars =>
     }
 
    return newSpan;
+}
+
+let count = 0 ;
+const addToCart = (price , id) =>
+{
+    count++;
+    setPrices(price , id);
+    document.getElementById('product-count').innerText = count;
+}
+
+const setPrices = (price , id) =>{
+    const initialPrice = document.getElementById('product-price');
+    const initialTotalPrice = document.getElementById('product-total');
+    const taxElement = document.getElementById('product-tax');
+    const totalWithTaxElement = document.getElementById('product-total-with-tax');
+    const totalPrice = +initialPrice.innerText + price;
+    const deliveryAndShipping = getShippingAndDelivery(totalPrice);
+    const totalPriceWithShippingAndDelivery = totalPrice + deliveryAndShipping*2;
+    const tax = totalPriceWithShippingAndDelivery * 0.15;
+    const totalWithTax = totalPriceWithShippingAndDelivery + tax;
+    document.getElementById('product-delivery').innerHTML = deliveryAndShipping;
+    document.getElementById('product-shipping').innerHTML = deliveryAndShipping;
+
+    initialPrice.innerText = totalPrice.toFixed(2);
+    initialTotalPrice.innerText = totalPriceWithShippingAndDelivery.toFixed(2);
+    taxElement.innerText = tax.toFixed(2);
+    totalWithTaxElement.innerText = totalWithTax.toFixed(2);
+
+}
+
+const getShippingAndDelivery = price =>
+{
+    let deliveryAndShipping = 0;
+
+    if(price>1000){
+        deliveryAndShipping = 200;
+    }
+    else if(price>800){
+        deliveryAndShipping = 150;
+    }
+    else if(price>500)
+    {
+        deliveryAndShipping = 100;
+    }
+
+    return deliveryAndShipping;
 }
 
 

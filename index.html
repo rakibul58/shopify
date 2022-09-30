@@ -64,7 +64,7 @@
                   <p class="w-75 my-4 text-light">Your perfect pack for everyday use and walks in the forest. Stash your
                     laptop (up to 15 inches) in
                     the padded sleeve, your everyday</p>
-                  <button class="text-white my-btn rounded fw-semibold">Buy Now</button>
+                  <button onclick="addToCart(109.95 , 1)" class="text-white my-btn rounded fw-semibold">Buy Now</button>
                 </div>
               </div>
               <div class="col-12 col-lg-5 text-center pb-5 pt-3">
@@ -82,7 +82,7 @@
                     outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or
                     son in this thanksgiving or Christmas Day.
                   </p>
-                  <button class="text-white my-btn rounded fw-semibold">Buy Now</button>
+                  <button onclick="addToCart(55.99 , 3)" class="text-white my-btn rounded fw-semibold">Buy Now</button>
                 </div>
               </div>
               <div class="col-12 col-lg-5 text-center pb-5 pt-3">
@@ -98,7 +98,7 @@
                   <p class="w-75 my-4 text-light">The color could be slightly different between on the screen and in
                     practice. / Please note that body builds vary by person, therefore, detailed size information should
                     be reviewed below on the product description.</p>
-                  <button class="text-white my-btn rounded fw-semibold">Buy Now</button>
+                  <button onclick="addToCart(22.3 , 2)" class="text-white my-btn rounded fw-semibold">Buy Now</button>
                 </div>
               </div>
               <div class="col-12 col-lg-5 text-center pb-5 pt-3">
@@ -125,6 +125,7 @@
   <main class="mt-5">
     <section id="products">
       <div class="container">
+        <h2 class="text-warning mb-4">Our Products</h2>
         <div class="row gap-lg-0 gap-5">
           <div class="col-12 col-lg-9 p-4 rounded"
             style="background-image: linear-gradient(to right top, #ff002d, #ff0039, #ff0044, #ff004e, #ff0058, #fe006d, #f90081, #f10a95, #d930b6, #b54bd3, #805fe9, #006ff5);">
@@ -134,15 +135,15 @@
           </div>
           <div class="col-md-3">
             <div class="rounded d-flex flex-column py-3 ps-4"
-              style="width: 250px; background-image: linear-gradient(to right top, #ff002d, #ff0039, #ff0044, #ff004e, #ff0058, #fe006d, #f90081, #f10a95, #d930b6, #b54bd3, #805fe9, #006ff5);">
+              style="width: 300px; background-image: linear-gradient(to right top, #ff002d, #ff0039, #ff0044, #ff004e, #ff0058, #fe006d, #f90081, #f10a95, #d930b6, #b54bd3, #805fe9, #006ff5);">
               <h5 class="mt-3 mb-4 fw-bold text-white">My Cart</h5>
-              <p class="text-light fs-5">Total Product : <Span class="text-warning fw-bold">0</Span></p>
-              <p class="text-light fs-5">Price : <Span class="text-warning fw-bold">0$</Span></p>
-              <p class="text-light fs-5">Delivery : <Span class="text-warning fw-bold">0$</Span></p>
-              <p class="text-light fs-5">Shipping : <Span class="text-warning fw-bold">0$</Span></p>
-              <p class="text-light fs-5">Total Price : <Span class="text-warning fw-bold">0$</Span></p>
-              <p class="text-light fs-5">Tax : <Span class="text-warning fw-bold">0$</Span></p>
-              <p class="text-light fs-5">Total Price<br>(including Tax): <Span class="text-warning fw-bold">0$</Span>
+              <p class="text-light fs-5"><i class="fa-solid fa-cart-plus"></i> : <Span id="product-count" class="text-warning fw-bold">0</Span></p>
+              <p class="text-light fs-5">Price : <Span class="text-warning fw-bold"><span id="product-price">0</span>$</Span></p>
+              <p class="text-light fs-5">Delivery : <Span class="text-warning fw-bold"><span id="product-delivery">0</span>$</Span></p>
+              <p class="text-light fs-5">Shipping : <Span class="text-warning fw-bold"><span id="product-shipping">0</span>$</Span></p>
+              <p class="text-light fs-5">Total Price : <Span class="text-warning fw-bold"><span id="product-total">0</span>$</Span></p>
+              <p class="text-light fs-5">Tax : <Span class="text-warning fw-bold"><span id="product-tax">0</span>$</Span></p>
+              <p class="text-light fs-5">Total Price<br>(including Tax): <Span class="text-warning fw-bold"><span id="product-total-with-tax">0</span>$</Span>
               </p>
             </div>
             <button class="text-white my-btn rounded fw-semibold mt-3">Check Out</button>
