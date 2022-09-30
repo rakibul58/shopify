@@ -13,7 +13,7 @@ const showProducts = products =>
 
         const newDiv = document.createElement('div');
         newDiv.classList.add('col');
-        const stars = getstars(product.rating.rate);
+        const stars = getStars(product.rating.rate);
         // console.log(stars.innerHTML)
         newDiv.innerHTML = `
         
@@ -29,7 +29,7 @@ const showProducts = products =>
                     <p id="stars">${stars.innerHTML}</p>
                 </div>
                 <button onclick="addToCart(${product.price} , ${product.id})" class="my-btn rounded text-white fw-semibold">Buy</button>
-                <button class="my-btn rounded text-white fw-semibold">Details</button>
+                <button onclick="fetchProduct('${product.id}')" class="my-btn rounded text-white fw-semibold" data-bs-toggle="modal" data-bs-target="#exampleModal">Details</button>
             </div>
         </div>
         
@@ -40,7 +40,7 @@ const showProducts = products =>
 }
 
 
-const getstars = numOfStars =>
+const getStars = numOfStars =>
 {
     const intNumOfStars = parseInt(numOfStars);
     const newSpan = document.createElement('span');
@@ -111,5 +111,38 @@ const getShippingAndDelivery = price =>
     return deliveryAndShipping;
 }
 
+const fetchProduct = id =>{
+    fetch(`https://fakestoreapi.com/products/${id}`)
+            .then(res=>res.json())
+            .then(json=>showModal(json))
+}
+
+const showModal = data =>{
+    // console.log(data)
+    document.getElementById('exampleModalLabel').innerText = data.title;
+    document.getElementById('modal-img').setAttribute('src' , data.image);
+    document.getElementById('modal-details').innerText = data.description;
+    document.getElementById('modal-price').innerText = `Price: ${data.price}$`;
+}
+
+
+const handleCheckOut = () =>{
+    if(document.getElementById('alert-sign').classList.contains('d-none'))
+        document.getElementById('alert-sign').classList.remove('d-none');
+    else
+        document.getElementById('alert-sign').classList.add('d-none');
+    const initialPrice = document.getElementById('product-price');
+    const initialTotalPrice = document.getElementById('product-total');
+    const taxElement = document.getElementById('product-tax');
+    const totalWithTaxElement = document.getElementById('product-total-with-tax');
+    document.getElementById('alert-total-price').innerText = totalWithTaxElement.innerText;
+    document.getElementById('product-delivery').innerHTML = deliveryAndShipping;
+    document.getElementById('product-shipping').innerHTML = deliveryAndShipping;
+
+}
+
+const hide = () =>{
+    document.getElementById('alert-sign').classList.add('d-none');
+}
 
 loadProducts();
