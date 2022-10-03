@@ -30,7 +30,7 @@ const showProducts = products =>
                 <h5 class="card-title">${product.title}</h5>
                 <p class="card-text">${product.description.length<50 ? product.description : product.description.slice(0,50)+'...'}</p>
             </div>
-            <div class="card-footer border-0 bg-white pb-2 g-0">
+            <div class="card-footer border-0 bg-white pb-2 g-0 mb-2">
                 <div class="d-flex justify-content-between">
                     <h5 class="text-warning">${product.price}$<h5>
                     <p id="stars">${stars.innerHTML}</p>
@@ -171,4 +171,46 @@ document.getElementById('search-input').addEventListener('keypress' , (event) =>
 
 });
 
+const loadUpcomingProducts = () =>
+{
+    fetch('https://dummyjson.com/products?limit=3&skip=0')
+    .then(res => res.json())
+    .then(data => showUpcomingProducts(data.products))
+}
+
+const showUpcomingProducts = products =>
+{
+    const productContainer = document.getElementById('upcoming-container');
+    productContainer.innerHTML = ``;
+    products.forEach(product => {
+
+        const newDiv = document.createElement('div');
+        newDiv.classList.add('col');
+        // productContainer.textContent = '';
+        // console.log(product);
+        newDiv.innerHTML = `
+        
+        <div class="h-100 card">
+            <img height="250px" src="${product.images[0]}" class="rounded p-4 card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${product.title}</h5>
+                <p class="card-text">${product.description.length<50 ? product.description : product.description.slice(0,50)+'...'}</p>
+            </div>
+            <div class="card-footer border-0 bg-white pb-2 g-0 mb-2">
+                <div class="d-flex justify-content-between">
+                    <h5 class="text-warning">${product.price}$<h5>
+                    <h5 class="text-warning">Coming Soon<h5>
+                </div>
+                
+            </div>
+        </div>
+        
+        `;
+        productContainer.appendChild(newDiv);
+        
+    });
+}
+
+
 loadProducts();
+loadUpcomingProducts();

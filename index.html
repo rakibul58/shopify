@@ -33,7 +33,7 @@
               <a class="my-nav-link" href="#products">Products</a>
             </li>
             <li class="nav-item">
-              <a class="my-nav-link" href="#">Upcoming</a>
+              <a class="my-nav-link" href="#upcomig">Upcoming</a>
             </li>
             <li class="nav-item">
               <a class="my-nav-link" href="#">Review</a>
@@ -44,9 +44,10 @@
 
           </ul>
           <form class="d-flex" role="search">
-            <input id="search-input" class="form-control me-2 fw-semibold text-danger" type="search" placeholder="Search"
-              aria-label="Search">
-            <a href="#products" onclick="searchProducts()" id="search-btn" class="text-white my-btn rounded fw-semibold text-decoration-none">Search</a>
+            <input id="search-input" class="form-control me-2 fw-semibold text-danger" type="search"
+              placeholder="Search" aria-label="Search">
+            <a href="#products" onclick="searchProducts()" id="search-btn"
+              class="text-white my-btn rounded fw-semibold text-decoration-none">Search</a>
           </form>
         </div>
       </div>
@@ -123,6 +124,7 @@
   </header>
   <!-- main part -->
   <main class="mt-5">
+    <!-- Products  -->
     <section id="products">
       <div class="container">
         <h2 class="text-warning mb-4">Our Products</h2>
@@ -183,7 +185,7 @@
                 </div>
               </div>
             </div>
-            <button onclick="handleCheckOut()" class="text-white my-btn rounded fw-semibold mt-3">Check Out</button>
+            <button onclick="handleCheckOut()" class="text-white my-btn rounded fw-semibold mt-3 mb-5 mb-lg-0">Check Out</button>
             <div id="alert-sign" class="alert alert-success alert-dismissible fade show mt-3 d-none" role="alert">
               <strong>Your Total Price : <span id="alert-total-price"></span>$</strong><br>
               <strong>Thank You!</strong> Please Come Again.
@@ -193,8 +195,22 @@
         </div>
       </div>
     </section>
+    <!-- Upcoming Products -->
+    <section id="upcomig">
+      <div class="container">
+        <h2 class="text-warning mb-4">Our Upcoming Products</h2>
+        <div class="">
+          <div class="p-4 rounded"
+            style="margin-bottom:100px; background-image: linear-gradient(to right top, #ff002d, #ff0039, #ff0044, #ff004e, #ff0058, #fe006d, #f90081, #f10a95, #d930b6, #b54bd3, #805fe9, #006ff5);">
+            <div id="upcoming-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
- 
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
