@@ -1,19 +1,26 @@
- const loadProducts = () =>
+let products = [];
+
+const loadProducts = () =>
 {
     fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
-            .then(json=>showProducts(json))
+            .then(json=>{
+                products = [...json];
+                showProducts(json)
+            })
 };
 
 
 const showProducts = products =>
 {
     const productContainer = document.getElementById('product-container');
+    productContainer.innerHTML = ``;
     products.forEach(product => {
 
         const newDiv = document.createElement('div');
         newDiv.classList.add('col');
         const stars = getStars(product.rating.rate);
+        // productContainer.textContent = '';
         // console.log(stars.innerHTML)
         newDiv.innerHTML = `
         
@@ -131,18 +138,36 @@ const handleCheckOut = () =>{
         document.getElementById('alert-sign').classList.remove('d-none');
     else
         document.getElementById('alert-sign').classList.add('d-none');
-    const initialPrice = document.getElementById('product-price');
-    const initialTotalPrice = document.getElementById('product-total');
-    const taxElement = document.getElementById('product-tax');
+    
     const totalWithTaxElement = document.getElementById('product-total-with-tax');
     document.getElementById('alert-total-price').innerText = totalWithTaxElement.innerText;
-    document.getElementById('product-delivery').innerHTML = deliveryAndShipping;
-    document.getElementById('product-shipping').innerHTML = deliveryAndShipping;
+    document.getElementById('product-delivery').innerHTML = '0';
+    document.getElementById('product-shipping').innerHTML = '0';
+    document.getElementById('product-tax').innerText = '0';
+    document.getElementById('product-price').innerText = '0';
+    document.getElementById('product-total').innerText = '0';
+    document.getElementById('product-total-with-tax').innerText = '0';
+    document.getElementById('product-count').innerText = '0';
+    count = 0;
 
 }
 
 const hide = () =>{
     document.getElementById('alert-sign').classList.add('d-none');
 }
+
+const searchProducts = () =>{
+    const inputText = document.getElementById('search-input');
+    const searchedProducts = products.filter(product => product.title.toLowerCase().includes(inputText.value.toLowerCase()));
+    showProducts(searchedProducts);
+    inputText.value = ``;
+    
+}
+
+document.getElementById('search-input').addEventListener('keypress' , (event) =>{
+
+    
+
+});
 
 loadProducts();
