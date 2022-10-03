@@ -166,7 +166,8 @@ const searchProducts = () =>{
 
 document.getElementById('search-input').addEventListener('keypress' , (event) =>{
 
-    
+        if(event.key === 'Enter')
+            searchProducts();
 
 });
 
