@@ -196,7 +196,7 @@ const showUpcomingProducts = products =>
                 <h5 class="card-title">${product.title}</h5>
                 <p class="card-text">${product.description.length<50 ? product.description : product.description.slice(0,50)+'...'}</p>
             </div>
-            <div class="card-footer border-0 bg-white pb-2 g-0 mb-2">
+            <div class="card-footer border-0 bg-white pb-2 g-5 mb-2">
                 <div class="d-flex justify-content-between">
                     <h5 class="text-warning">${product.price}$<h5>
                     <h5 class="text-warning">Coming Soon<h5>

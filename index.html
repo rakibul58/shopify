@@ -36,7 +36,7 @@
               <a class="my-nav-link" href="#upcomig">Upcoming</a>
             </li>
             <li class="nav-item">
-              <a class="my-nav-link" href="#">Review</a>
+              <a class="my-nav-link" href="#reviews">Review</a>
             </li>
             <li class="nav-item">
               <a class="my-nav-link" href="#">Contact</a>
@@ -185,7 +185,8 @@
                 </div>
               </div>
             </div>
-            <button onclick="handleCheckOut()" class="text-white my-btn rounded fw-semibold mt-3 mb-5 mb-lg-0">Check Out</button>
+            <button onclick="handleCheckOut()" class="text-white my-btn rounded fw-semibold mt-3 mb-5 mb-lg-0">Check
+              Out</button>
             <div id="alert-sign" class="alert alert-success alert-dismissible fade show mt-3 d-none" role="alert">
               <strong>Your Total Price : <span id="alert-total-price"></span>$</strong><br>
               <strong>Thank You!</strong> Please Come Again.
@@ -200,12 +201,255 @@
       <div class="container">
         <h2 class="text-warning mb-4">Our Upcoming Products</h2>
         <div class="">
-          <div class="p-4 rounded"
+          <div class="p-5 rounded"
             style="margin-bottom:100px; background-image: linear-gradient(to right top, #ff002d, #ff0039, #ff0044, #ff004e, #ff0058, #fe006d, #f90081, #f10a95, #d930b6, #b54bd3, #805fe9, #006ff5);">
-            <div id="upcoming-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-              
+            <div id="upcoming-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Reviews -->
+    <section id="reviews" class="d-none d-lg-block">
+      <div class="container" style="margin-bottom: 100px;">
+        <h2 class="text-warning mb-4">Our Products Reviews</h2>
+        <div id="carouselExampleIndicators" class="carousel slide px-5 rounded d-flex align-items-center"
+          data-bs-ride="true"
+          style="margin-bottom:100px; background-image: linear-gradient(to right top, #ff002d, #ff0039, #ff0044, #ff004e, #ff0058, #fe006d, #f90081, #f10a95, #d930b6, #b54bd3, #805fe9, #006ff5); height: 450px;">
+
+          <div class="carousel-inner p-5">
+            <div class="carousel-item active">
+              <div class="row row-cols-1 row-cols-md-3">
+
+                <div class="col">
+                  <div class="card h-100 pb-3">
+
+                    <div class="card-body">
+                      <h5 class="card-title text-warning"><i class="fa-solid fa-star"></i><i
+                          class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                          class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></h5>
+                      <p class="card-text font-monospace fst-italic">"for those who praise, as it were, indeed with
+                        great pleasure, those times when they are in need, rather than rejecting them, and for the wise
+                        accusers"</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img
+                        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+                        style="width: 60px; height:60px" class="bg-danger rounded-circle ms-3" alt="">
+                      <div>
+                        <h6 class="m-0"><small>Calum Ferguson</small></h6>
+                        <span class="m-0 text-secondary"><small>Feb 14, 2020</small></span>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+                <div class="col">
+                  <div class="card h-100 pb-3">
+
+                    <div class="card-body">
+                      <h5 class="card-title text-warning"><i class="fa-solid fa-star"></i><i
+                          class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                          class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></h5>
+                      <p class="card-text font-monospace fst-italic">"because he reproaches for trouble as if he were to
+                        be reproached, a certain dark-skinned sailor will come to be praised. He is often chosen by
+                        certain names because we accuse the elders, for he is with us and we lead, and indeed he will
+                        receive the pleasures of the gentler reason"</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img
+                        src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29ufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                        style="width: 60px; height:60px" class="bg-danger rounded-circle ms-3" alt="">
+                      <div>
+                        <h6 class="m-0"><small>David Cho</small></h6>
+                        <span class="m-0"><small>Mar 24, 2022</small></span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col">
+                  <div class="card h-100 pb-3">
+
+                    <div class="card-body">
+                      <h5 class="card-title text-warning"><i class="fa-solid fa-star"></i><i
+                          class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                          class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></h5>
+                      <p class="card-text font-monospace fst-italic">"not again and again blinded do they leave those
+                        who accuse us, whence they hate us pleasure because pleasure therefore attains pain not those
+                        who are softened by things so as to be blinded"</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img
+                        src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                        style="width: 60px; height:60px" class="bg-danger rounded-circle ms-3" alt="">
+                      <div>
+                        <h6 class="m-0"><small>Kuddus Ali</small></h6>
+                        <span class="m-0"><small>Aug 16, 2020</small></span>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="carousel-item">
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                <div class="col">
+                  <div class="card h-100 pb-3">
+
+                    <div class="card-body">
+                      <h5 class="card-title text-warning"><i class="fa-solid fa-star"></i><i
+                          class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                          class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></h5>
+                      <p class="card-text font-monospace fst-italic">"and flees from electing the meek indeed, who are
+                        but nothing."</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img
+                        src="https://images.unsplash.com/photo-1485206412256-701ccc5b93ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                        style="width: 60px; height:60px" class="bg-danger rounded-circle ms-3" alt="">
+                      <div>
+                        <h6 class="m-0"><small>Abal Khan</small></h6>
+                        <span class="m-0 text-secondary"><small>Jan 19, 2021</small></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 pb-3">
+
+                    <div class="card-body">
+                      <h5 class="card-title text-warning"><i class="fa-solid fa-star"></i><i
+                          class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                          class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></i></h5>
+                      <p class="card-text font-monospace fst-italic">"but greater pains and similar labor and discovery
+                        and like there are times to be that and to us some pleasure some flexibility due to the
+                        discomfort of the body because it also causes great pain"</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img
+                        src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHBlcnNvbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60"
+                        style="width: 60px; height:60px" class="bg-danger rounded-circle ms-3" alt="">
+                      <div>
+                        <h6 class="m-0"><small>Alex Flex</small></h6>
+                        <span class="m-0 text-secondary"><small>Feb 19, 2022</small></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 pb-3">
+
+                    <div class="card-body">
+                      <h5 class="card-title text-warning"><i class="fa-solid fa-star"></i><i
+                          class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                          class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></h5>
+                      <p class="card-text font-monospace fst-italic">"that he may desire the pleasure of the corrupt and
+                        not the pleasure of the greater ones but unless he wills, we accuse the greater ones of
+                        pleasures because something and any of them"</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img
+                        src="https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cGVyc29ufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                        style="width: 60px; height:60px" class="bg-danger rounded-circle ms-3" alt="">
+                      <div>
+                        <h6 class="m-0"><small>Jewel Kaptai</small></h6>
+                        <span class="m-0 text-secondary"><small>Jun 13, 2020</small></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="carousel-item">
+              <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card h-100 pb-3">
+
+                    <div class="card-body">
+                      <h5 class="card-title text-warning"><i class="fa-solid fa-star"></i><i
+                          class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                          class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></h5>
+                      <p class="card-text font-monospace fst-italic">"I shall open the distinction of hardships and
+                        beginnings of hardships with wisdom, and that every net blinded person hates the fact that it is
+                        convenient,because it is less"</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img
+                        src="https://images.unsplash.com/photo-1485206283729-2ca7d035185e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHBlcnNvbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60"
+                        style="width: 60px; height:60px" class="bg-danger rounded-circle ms-3" alt="">
+                      <div>
+                        <h6 class="m-0"><small>Seth Doyle</small></h6>
+                        <span class="m-0 text-secondary"><small>Jun 14, 2020</small></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 pb-3">
+
+                    <div class="card-body">
+                      <h5 class="card-title text-warning"><i class="fa-solid fa-star"></i><i
+                          class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                          class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></h5>
+                      <p class="card-text font-monospace fst-italic">"Whoever reproaches us with just pleasure will have
+                        none because he wants the pains and does not because he seeks our needs none and we accuse him
+                        only of the easy ones"</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img
+                        src="https://images.unsplash.com/photo-1595399874399-10f2444c4eb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60"
+                        style="width: 60px; height:60px" class="bg-danger rounded-circle ms-3" alt="">
+                      <div>
+                        <h6 class="m-0"><small>Alex Kraveskiey</small></h6>
+                        <span class="m-0 text-secondary"><small>Feb 23, 2020</small></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100 pb-3">
+
+                    <div class="card-body">
+                      <h5 class="card-title text-warning"><i class="fa-solid fa-star"></i><i
+                          class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                          class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></h5>
+                      <p class="card-text font-monospace fst-italic">"so that our pains are either because it is a
+                        flight to find or to choose, I will explain who will be pursued, the dark-headed naut repels
+                        that which he was born with, because it is so or so that they are older"</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img
+                        src="https://images.unsplash.com/photo-1429114753120-0733a750d6c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTJ8fHBlcnNvbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60"
+                        style="width: 60px; height:60px" class="bg-danger rounded-circle ms-3" alt="">
+                      <div>
+                        <h6 class="m-0"><small>Babul Ullah</small></h6>
+                        <span class="m-0 text-secondary"><small>Aug 13, 2020</small></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <button class="carousel-control-prev rounded-circle" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-secondary rounded-circle me-auto ms-3" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next rounded-circle" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-secondary rounded-circle ms-auto me-3" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
     </section>
