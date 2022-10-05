@@ -16,6 +16,20 @@
     border: 0.2px solid;
     /* opacity: 90%; */
 }
+.my-input{
+
+    background-color: inherit;
+    padding: 5px 20px;
+    border: 0px;
+    /* border: 0.2px solid; */
+    /* opacity: 90%; */
+}
+
+.subscribe{
+    border:1px solid white;
+    width: fit-content;
+    padding: 15px;
+}
 
 .my-btn:hover{
     background-image: linear-gradient(to left bottom, #ff70f3, #ff4bc1, #ff2a88, #ff274e, #ff4200);
