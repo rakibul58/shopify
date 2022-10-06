@@ -159,7 +159,17 @@ const hide = () =>{
 const searchProducts = () =>{
     const inputText = document.getElementById('search-input');
     const searchedProducts = products.filter(product => product.title.toLowerCase().includes(inputText.value.toLowerCase()));
-    showProducts(searchedProducts);
+    if(searchedProducts.length===0){
+        document.getElementById('not-found').classList.remove('d-none');
+        document.getElementById('products').classList.add('d-none');
+        // console.log("0");
+    }
+    else{
+        document.getElementById('products').classList.remove('d-none');
+        showProducts(searchedProducts);
+        document.getElementById('not-found').classList.add('d-none');
+        // console.log('1');
+    }
     inputText.value = ``;
     
 }
